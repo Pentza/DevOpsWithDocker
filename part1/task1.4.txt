@@ -1,0 +1,16 @@
+> docker run -d -it --rm --name curl ubuntu sh -c "echo 'Input website:'; read website; echo 'Searching..'; sleep 1; curl http://helsinki.fi;"
+02ab3d168ff2646d795420a3e888f77e4cc0d1201372e836835303ef0f3fb508
+> docker exec curl sh -c "apt-get update && apt-get install curl -y"
+...
+...
+...
+> docker attach curl
+helsinki.fi
+Searching..
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>301 Moved Permanently</title>
+</head><body>
+<h1>Moved Permanently</h1>
+<p>The document has moved <a href="http://www.helsinki.fi/">here</a>.</p>
+</body></html>

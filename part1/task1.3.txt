@@ -1,0 +1,11 @@
+> docker run -d --rm -it --name secret-message devopsdockeruh/simple-web-service:ubuntu
+1a4f29cbb60b2f5f975bb2e3e35ce528bca361fb2a3820602c7225ea764249
+> docker exec -it secret-message bash
+root@1a4f29cbb6:/usr/src/app# tail -f ./text.log
+2021-03-19 09:26:46 +0000 UTC
+2021-03-19 09:26:48 +0000 UTC
+2021-03-19 09:26:50 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+2021-03-19 09:26:52 +0000 UTC
+2021-03-19 09:26:54 +0000 UTC
+read escape sequence
