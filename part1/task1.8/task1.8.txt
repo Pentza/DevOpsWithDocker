@@ -1,0 +1,30 @@
+> docker build . -t curler
+[+] Building 22.5s (10/10) FINISHED
+ => [internal] load build definition from Dockerfile                                                                0.0s
+ => => transferring dockerfile: 203B                                                                                0.0s
+ => [internal] load .dockerignore                                                                                   0.0s
+ => => transferring context: 2B                                                                                     0.0s
+ => [internal] load metadata for docker.io/library/ubuntu:18.04                                                     1.5s
+ => [1/5] FROM docker.io/library/ubuntu:18.04@sha256:122f506735a26c0a1aff2363335412cfc4f84de38326356d31ee00c2cbe52  0.0s
+ => [internal] load build context                                                                                   0.0s
+ => => transferring context: 31B                                                                                    0.0s
+ => CACHED [2/5] WORKDIR /usr/src/app                                                                               0.0s
+ => CACHED [3/5] COPY website.sh .                                                                                  0.0s
+ => CACHED [4/5] RUN chmod +x website.sh                                                                            0.0s
+ => [5/5] RUN apt-get update && apt-get install curl -y                                                            20.5s
+ => exporting to image                                                                                              0.3s
+ => => exporting layers                                                                                             0.3s
+ => => writing image sha256:c9faf717b4265ab20b2d68f8aeae6b6d19e994053f8953df24fdf93af4cefb9a                        0.0s
+ => => naming to docker.io/library/curler                                                                           0.0s
+
+> docker run -it curler
+Input website:
+helsinki.fi
+Searching..
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>301 Moved Permanently</title>
+</head><body>
+<h1>Moved Permanently</h1>
+<p>The document has moved <a href="http://www.helsinki.fi/">here</a>.</p>
+</body></html>

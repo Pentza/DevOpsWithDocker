@@ -1,0 +1,28 @@
+> docker images
+REPOSITORY                          TAG       IMAGE ID       CREATED       SIZE
+devopsdockeruh/simple-web-service   ubuntu    4e3362e907d5   5 days ago    83MB
+devopsdockeruh/simple-web-service   alpine    fd312adc88e0   5 days ago    15.7MB
+
+PS C:\Koulu\DevOpsWithDocker> docker run -d --rm fd
+88c3b3891b8bc612075f335852ea703e04f0513f47b3bbbefa45e32913fdeb91
+PS C:\Koulu\DevOpsWithDocker> docker run -d --rm 4e
+9c6eb4acc70e2032d7a227a4736a21f7c3828d12b22a107ccf1304d4d5b840e0
+
+> docker exec 88 tail -f ./text.log
+2021-03-19 14:04:41 +0000 UTC
+2021-03-19 14:04:43 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+2021-03-19 14:04:45 +0000 UTC
+2021-03-19 14:04:47 +0000 UTC
+2021-03-19 14:04:49 +0000 UTC
+2021-03-19 14:04:51 +0000 UTC
+
+> docker exec 9c tail -f ./text.log
+2021-03-19 14:04:42 +0000 UTC
+2021-03-19 14:04:44 +0000 UTC
+2021-03-19 14:04:46 +0000 UTC
+2021-03-19 14:04:48 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+2021-03-19 14:04:50 +0000 UTC
+2021-03-19 14:04:52 +0000 UTC
+2021-03-19 14:04:54 +0000 UTC
