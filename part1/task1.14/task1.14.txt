@@ -1,0 +1,11 @@
+> docker build -f ./Dockerfile.frontend -t frontend:v2 .
+[+] Building 8.4s (6/6) FINISHED
+
+> docker build -f ./Dockerfile.backend -t backend:v2 .
+[+] Building 0.2s (5/5) FINISHED
+
+> docker run -d -p 5000:5000 frontend:v2
+48e4d3460c6949f713099e65521d35af60b8b09813df70a511fef2bb7c6ecf5f
+
+> docker run -d -p 8080:8080 backend:v2
+d0524e3bd2268f0296e54711ae4dda4b0e7c78463200ffd3f9d8ea7f8a52e718

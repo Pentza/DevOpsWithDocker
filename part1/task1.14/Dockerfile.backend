@@ -1,0 +1,9 @@
+# Image from task 1.13, assuming you have it. 
+# If not run "docker build . -t backend" in ../task1.13 
+FROM backend
+
+ENV REQUEST_ORIGIN=http://localhost:5000
+
+CMD ./server
+
+
