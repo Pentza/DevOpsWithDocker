@@ -1,0 +1,14 @@
+> docker-compose up
+
+Docker Compose is now in the Docker CLI, try `docker compose up`
+
+Recreating task22_web-service_1 ... done
+Attaching to task22_web-service_1
+web-service_1  | [GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+web-service_1  |
+web-service_1  | [GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+web-service_1  |  - using env:  export GIN_MODE=release
+web-service_1  |  - using code: gin.SetMode(gin.ReleaseMode)
+web-service_1  |
+web-service_1  | [GIN-debug] GET    /*path                    --> server.Start.func1 (3 handlers)
+web-service_1  | [GIN-debug] Listening and serving HTTP on :8080
