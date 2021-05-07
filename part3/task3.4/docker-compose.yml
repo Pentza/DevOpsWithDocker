@@ -1,0 +1,21 @@
+version: '3.9'
+
+services: 
+
+  frontend:
+    container_name: frontend_34
+    build:
+      context: .
+      dockerfile: Dockerfile.front
+    ports:
+      - 5000:5000
+    
+  backend:
+    container_name: backend_34
+    build:
+      context: .
+      dockerfile: Dockerfile.back
+    ports:
+      - 8000:8000
+
+
